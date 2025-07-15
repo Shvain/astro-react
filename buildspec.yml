@@ -1,0 +1,28 @@
+version: 0.2
+
+env:
+  variables:
+    S3_BUCKET: astro-react      # デプロイ先のバケット名
+    CLOUDFRONT_DISTRIBUTION_ID: E385BWA9XO5182    # CloudFront の Distribution ID
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 22
+    commands:
+      - npm ci
+
+  build:
+    commands:
+      - npm run build    #→ dist/ に静的ファイルが出る想定
+
+  post_build:
+    commands:
+      # S3 に同期
+      - aws s3 sync dist/ s3://$S3_BUCKET --delete
+      # CloudFront キャッシュ無効化
+      - aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths "/*"
+
+# artifacts は出力しない or 必要に応じて設定
+artifacts:
+  files: []
