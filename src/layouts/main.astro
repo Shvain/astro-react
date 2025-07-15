@@ -16,7 +16,7 @@ const { content } = Astro.props;
     <!-- ページ読み込み時にハイドレーション開始 -->
     <InteractiveHeader client:load title={content.title} />
     <main class="pt-16">
-        <slot />
+			<slot />
     </main>
   </body>
 </html>
