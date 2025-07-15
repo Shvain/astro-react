@@ -1,13 +1,22 @@
-# Astro with Tailwind
+# Astro with React
+Astro + Tailwind CSS + React の静的サイト
 
-```sh
-npm create astro@latest -- --template with-tailwindcss
+## はじめる
+1. 依存関係のインストール
+```
+npm i
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/with-tailwindcss)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/with-tailwindcss)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/with-tailwindcss/devcontainer.json)
+2. 開発サーバーを起動
+```
+npm run dev
+```
 
-Astro comes with [Tailwind](https://tailwindcss.com) support out of the box. This example showcases how to style your Astro project with Tailwind.
+## デプロイ
+AWS S3 + CloudFrontの構成でデプロイする。
 
-For complete setup instructions, please see our [Tailwind Integration Guide](https://docs.astro.build/en/guides/integrations-guide/tailwind).
+
+## Docs
+- [Astro](https://docs.astro.build/ja)
+- [React](https://ja.react.dev/reference/react)
+- [Tailwind CSS](https://tailwindcss.com/docs/installation/using-vite)
