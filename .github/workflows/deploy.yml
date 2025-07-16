@@ -3,7 +3,7 @@ name: Deploy Astro S3
 on:
   push:
     branches:
-      - main
+      - aa
 
 permissions:
   id-token: write
