@@ -6,7 +6,7 @@ interface buttonProps {
 }
 
 // 関数宣言
-function ButtonCounter({initialCount, test}: buttonProps) {
+function ButtonCounter({initialCount}: buttonProps) {
   const [count, setCount] = useState(initialCount || 0);
 
   const handleClick = () => {
