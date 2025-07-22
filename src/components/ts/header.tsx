@@ -1,16 +1,7 @@
 import { 
   useEffect, 
   useState,
-  useCallback,
 } from 'react';
-
-const Arry = [
-  1, 
-  2, 
-  3, 
-  4, 
-  5,
-];
 
 interface Props {
   title?: string;
@@ -63,13 +54,13 @@ export default function Header({
           <div className="flex items-center space-x-4">
             <a 
               href="/" 
-              className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+              className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
             >
               Home
             </a>
             <a 
               href="/count" 
-              className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+              className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
             >
               Counter
             </a>

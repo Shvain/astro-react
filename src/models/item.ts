@@ -15,7 +15,7 @@ const MockData: Item[] = [
     title: "サンドウィッチ",
     price: "¥500",
     image: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Food/Sandwich.png",
-    rating: 4.8,
+    rating: 2.8,
     link: "/sandwich",
     category: "フード",
     description: "新鮮な野菜とお肉を挟んだボリューム満点のサンドウィッチ。"
@@ -25,7 +25,7 @@ const MockData: Item[] = [
     title: "トロピカルジュース",
     price: "¥600",
     image: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Food/Tropical%20Drink.png",
-    rating: 4.6,
+    rating: 3.6,
     link: "/tropical-juice",
     category: "ドリンク",
     description: "さっぱりとした甘さが特徴のトロピカルジュース。"
@@ -55,7 +55,7 @@ const MockData: Item[] = [
     title: "ハンバーガー",
     price: "¥300",
     image: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Food/Hamburger.png",
-    rating: 4.3,
+    rating: 3.3,
     link: "/hamburger",
     category: "フード",
     description: "ジューシーなパティと新鮮な野菜を挟んだハンバーガー。"
@@ -65,7 +65,7 @@ const MockData: Item[] = [
     title: "ドーナツ",
     price: "¥120",
     image: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Food/Doughnut.png",
-    rating: 4.4,
+    rating: 2.4,
     link: "/donut",
     category: "サイド",
     description: "ふんわりとした生地に甘いクリームがたっぷり詰まったドーナツ。"
@@ -75,7 +75,7 @@ const MockData: Item[] = [
     title: "ビール",
     price: "¥640",
     image: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Food/Beer%20Mug.png",
-    rating: 4.4,
+    rating: 5,
     link: "/beer",
     category: "ドリンク",
     description: "爽やかな喉越しと豊かな香りが楽しめるビール。"
