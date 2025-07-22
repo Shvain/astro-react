@@ -1,53 +1,84 @@
 interface Item {
+  id: string;
   title: string;
   price: string;
   image: string;
   rating: number;
   link: string;
+  category?: string;
+  description?: string;
 }
 
 const MockData: Item[] = [
   {
-    title: "ワイヤレスイヤホン Pro",
-    price: "¥12,800",
-    image: "/heratemoji.png",
+    id: "sandwich",
+    title: "サンドウィッチ",
+    price: "¥500",
+    image: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Food/Sandwich.png",
     rating: 4.8,
-    link: "#product-1"
+    link: "/sandwich",
+    category: "フード",
+    description: "新鮮な野菜とお肉を挟んだボリューム満点のサンドウィッチ。"
   },
   {
-    title: "スマートウォッチ Series X",
-    price: "¥24,800",
-    image: "/heratemoji.png",
+    id: "tropical-juice",
+    title: "トロピカルジュース",
+    price: "¥600",
+    image: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Food/Tropical%20Drink.png",
     rating: 4.6,
-    link: "#product-2"
+    link: "/tropical-juice",
+    category: "ドリンク",
+    description: "さっぱりとした甘さが特徴のトロピカルジュース。"
   },
   {
-    title: "Bluetoothスピーカー Mini",
-    price: "¥8,900",
-    image: "/heratemoji.png",
+    id: "ice-cream",
+    title: "アイスクリーム",
+    price: "¥400",
+    image: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Food/Shaved%20Ice.png",
     rating: 4.7,
-    link: "#product-3"
+    link: "/ice-cream",
+    category: "サイド",
+    description: "つめたく冷たいアイスクリーム。暑い日にぴったりのデザートです。"
   },
   {
-    title: "モバイルバッテリー 20000mAh",
-    price: "¥3,980",
-    image: "/heratemoji.png",
+    id: "popcorn",
+    title: "ポップコーン",
+    price: "¥1,080",
+    image: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Food/Popcorn.png",
     rating: 4.5,
-    link: "#product-4"
+    link: "/popcorn",
+    category: "サイド",
+    description: "映画のお供に最適なポップコーン。軽やかな食感とバターの風味が楽しめます。"
   },
   {
-    title: "USB-C ケーブル 2m",
-    price: "¥1,580",
-    image: "/heratemoji.png",
+    id: "hamburger",
+    title: "ハンバーガー",
+    price: "¥300",
+    image: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Food/Hamburger.png",
     rating: 4.3,
-    link: "#product-5"
+    link: "/hamburger",
+    category: "フード",
+    description: "ジューシーなパティと新鮮な野菜を挟んだハンバーガー。"
   },
   {
-    title: "ワイヤレス充電器",
-    price: "¥5,800",
-    image: "/heratemoji.png",
+    id: "donut",
+    title: "ドーナツ",
+    price: "¥120",
+    image: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Food/Doughnut.png",
     rating: 4.4,
-    link: "#product-6"
+    link: "/donut",
+    category: "サイド",
+    description: "ふんわりとした生地に甘いクリームがたっぷり詰まったドーナツ。"
+  },
+    {
+    id: "beer",
+    title: "ビール",
+    price: "¥640",
+    image: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Food/Beer%20Mug.png",
+    rating: 4.4,
+    link: "/beer",
+    category: "ドリンク",
+    description: "爽やかな喉越しと豊かな香りが楽しめるビール。"
   },
 ];
 

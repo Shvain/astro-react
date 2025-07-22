@@ -1,13 +1,12 @@
 ---
 import Layout from '@layouts/main.astro';
 import ItemCard from '@components/ItemCard.astro';
+import TabButton from '@components/TabButton.astro';
 import { MockData } from '@models/item.ts'; 
 
 const pageContent = {
   title: 'Bamazon'
 };
-
-const products = MockData;
 ---
 
 <Layout content={pageContent}>
@@ -16,21 +15,21 @@ const products = MockData;
       <div class="mx-auto max-w-7xl px-8">
         <div class="text-center">
           <h1 class="text-4xl font-bold text-gray-900 mb-4">
-            <span class="text-purple-500">最新テクノロジー</span>をお届け
+            <span class="text-black">モバイルオーダー
           </h1>
-          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-            高品質な電子機器を手頃な価格でご提供します。
-          </p>
         </div>
       </div>
     </section>
     <section class="py-16">
       <div class="mx-auto max-w-7xl px-8">
-        <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">
-          商品一覧
-        </h2>
+        <div class="flex flex-col items-center pb-10 gap-y-7">
+          <h2 class="text-3xl font-bold text-gray-900 text-center">
+            商品一覧
+          </h2>
+          <TabButton tabs1="フード" tabs2="ドリンク" tabs3="サイド" />
+        </div>  
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {products.map((product) => (
+          {MockData.map((product) => (
             <ItemCard
               title={product.title}
               price={product.price}
