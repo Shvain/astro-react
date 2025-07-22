@@ -1,17 +1,34 @@
-import { useState } from "react";
+import { set } from "astro:schema";
+import { useState, useCallback } from "react";
 
 interface buttonProps {
   initialCount?: number;
   test?: string;
 }
 
+const getCount2 = () => {
+  return getCount4();
+};
+
+const getCount3 = () => {
+  return 1;
+};
+
+const getCount4 = () => {
+  return 2;
+};
+
 // 関数宣言
 function ButtonCounter({initialCount}: buttonProps) {
-  const [count, setCount] = useState(initialCount || 0);
+  const [count, setCount] = useState(initialCount ?? 1);
 
-  const handleClick = () => {
+  const handleClick = useCallback(() => {
     setCount(count + 1);
-  };
+  }, [count]);
+
+  const getCount = useCallback(() => {
+    return count;
+  }, [count]);
 
   return (
     <div className="flex flex-col items-center">

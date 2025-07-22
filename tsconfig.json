@@ -12,7 +12,8 @@
     "paths": {
       "@components/*": ["src/components/*"],
       "@layouts/*": ["src/layouts/*"],
-      "@assets/*": ["src/assets/*"]
+      "@assets/*": ["src/assets/*"],
+      "@models/*": ["src/models/*"]
     },
     "jsx": "react-jsx",
     "jsxImportSource": "react"

@@ -1,35 +1,46 @@
 ---
 import Layout from '@layouts/main.astro';
+import ItemCard from '@components/ItemCard.astro';
+import { MockData } from '@models/item.ts'; 
 
-// ページのメタデータ
 const pageContent = {
-  title: 'Astro + React'
+  title: 'Bamazon'
 };
+
+const products = MockData;
 ---
 
 <Layout content={pageContent}>
- 	<div class="w-full bg-white text-black">
-		<section class="mx-auto flex h-screen min-h-[700px] max-w-7xl flex-col bg-white">
-			<div class="flex w-full flex-1 items-center justify-center px-8">
-				<div class="flex flex-1 flex-col items-center justify-center gap-8 md:flex-row md:justify-between">
-					<h1 class="inset-0 flex items-center justify-center text-[clamp(1.5rem,5vw,3rem)] font-bold leading-relaxed">
-						<span class="text-start">
-							Say Hello!
-							<br />
-							<span class="text-purple-500">こんにちは！</span>
-						</span>
-					</h1>
-					<div class="flex flex-1 justify-end">
-						<div class="relative h-[clamp(300px,60vw,300px)] w-[clamp(300px,10vw,300px)]">
-							<img
-								src="heratemoji.png"
-								alt="トップイメージ"
-								class="object-contain"
-							/>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-	</div>
+  <div class="w-full bg-gray-50 min-h-screen">
+    <section class="bg-white py-16">
+      <div class="mx-auto max-w-7xl px-8">
+        <div class="text-center">
+          <h1 class="text-4xl font-bold text-gray-900 mb-4">
+            <span class="text-purple-500">最新テクノロジー</span>をお届け
+          </h1>
+          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+            高品質な電子機器を手頃な価格でご提供します。
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="py-16">
+      <div class="mx-auto max-w-7xl px-8">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">
+          商品一覧
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          {products.map((product) => (
+            <ItemCard
+              title={product.title}
+              price={product.price}
+              image={product.image}
+              rating={product.rating}
+              link={product.link}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  </div>
 </Layout>
