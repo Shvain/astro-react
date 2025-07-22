@@ -39,7 +39,7 @@ export default function Header({
       className={`
         fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out
         ${isScrolled 
-          ? 'backdrop-blur-sm bg-white rounded-xl mx-10 mt-2' 
+          ? 'backdrop-blur-lg rounded-xl mx-10 mt-2' 
           : 'bg-white'
         }
       `}
@@ -72,12 +72,6 @@ export default function Header({
               className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
             >
               Counter
-            </a>
-            <a 
-              href="/markdown-page" 
-              className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
-            >
-              Markdown
             </a>
           </div>
         </div>

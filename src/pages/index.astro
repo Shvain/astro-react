@@ -1,7 +1,6 @@
 ---
 import Layout from '@layouts/main.astro';
-import ItemCard from '@components/ItemCard.astro';
-import TabButton from '@components/TabButton.astro';
+import ProductList from '@components/ts/ProductList';
 import { MockData } from '@models/item.ts'; 
 
 const pageContent = {
@@ -15,7 +14,7 @@ const pageContent = {
       <div class="mx-auto max-w-7xl px-8">
         <div class="text-center">
           <h1 class="text-4xl font-bold text-gray-900 mb-4">
-            <span class="text-black">モバイルオーダー
+            <span class="text-black">モバイルオーダー</span>
           </h1>
         </div>
       </div>
@@ -26,19 +25,8 @@ const pageContent = {
           <h2 class="text-3xl font-bold text-gray-900 text-center">
             商品一覧
           </h2>
-          <TabButton tabs1="フード" tabs2="ドリンク" tabs3="サイド" />
-        </div>  
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {MockData.map((product) => (
-            <ItemCard
-              title={product.title}
-              price={product.price}
-              image={product.image}
-              rating={product.rating}
-              link={product.link}
-            />
-          ))}
-        </div>
+        </div> 
+        <ProductList client:load products={MockData} />
       </div>
     </section>
   </div>
