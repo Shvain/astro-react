@@ -4,7 +4,7 @@ interface Props {
   title?: string;
 }
 
-export default function InteractiveHeader({ title = "My Site" }: Props) {
+export default function Header({ title = "My Site" }: Props) {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -57,10 +57,10 @@ export default function InteractiveHeader({ title = "My Site" }: Props) {
               Home
             </a>
             <a 
-              href="/about" 
+              href="/count" 
               className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
             >
-              About
+              Counter
             </a>
             <a 
               href="/markdown-page" 

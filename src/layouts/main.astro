@@ -1,6 +1,6 @@
 ---
 import '../styles/global.css';
-import InteractiveHeader from '@components/ts/header';
+import Header from '@components/ts/header';
 
 const { content } = Astro.props;
 ---
@@ -13,8 +13,7 @@ const { content } = Astro.props;
     <title>{content.title}</title>
   </head>
   <body>
-    <!-- ページ読み込み時にハイドレーション開始 -->
-    <InteractiveHeader client:load title={content.title} />
+    <Header client:load title={content.title} />
     <main class="pt-16">
 			<slot />
     </main>
