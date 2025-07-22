@@ -25,8 +25,7 @@ export default function Header({
 
   useEffect(() => {
     const checkScrolling = () => {
-      const scrollY = window.scrollY;
-      setIsScrolled(scrollY > 50);
+      setIsScrolled(50 < window.scrollY);
     };
     window.addEventListener('scroll', checkScrolling, { passive: true });
     checkScrolling();
