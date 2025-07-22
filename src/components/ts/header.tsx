@@ -1,28 +1,37 @@
 import { 
   useEffect, 
   useState,
+  useCallback,
 } from 'react';
+
+const Arry = [
+  1, 
+  2, 
+  3, 
+  4, 
+  5,
+];
 
 interface Props {
   title?: string;
+  test?: string;
 }
 
-export default function Header({ title = "My Site" }: Props) {
+export default function Header({
+  title = "My Site",
+  test = "test",
+}: Props) {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
+    const checkScrolling = () => {
       const scrollY = window.scrollY;
       setIsScrolled(scrollY > 50);
     };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    
-    // 初期実行
-    handleScroll();
-
+    window.addEventListener('scroll', checkScrolling, { passive: true });
+    checkScrolling();
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('scroll', checkScrolling);
     };
   }, []);
 
