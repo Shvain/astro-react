@@ -1,11 +1,15 @@
-import { useState } from 'react';
-import type { Item } from '@models/item';
+import { 
+  useState,
+} from 'react';
+import type { 
+  Item, 
+} from '@models/item';
 
 interface ProductListProps {
   products: Item[];
 }
 
-const ProductList: React.FC<ProductListProps> = ({ products }) => {
+const ProductList = ({ products }: ProductListProps) => {
   const [activeCategory, setActiveCategory] = useState<string>('全て');
 
   const filteredProducts = activeCategory === '全て' 
@@ -98,7 +102,7 @@ const ProductList: React.FC<ProductListProps> = ({ products }) => {
                     href={product.link}
                     className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 transition-colors duration-200"
                   >
-                    購入する
+                    カートに入れる
                   </a>
                 </div>
               </div>
