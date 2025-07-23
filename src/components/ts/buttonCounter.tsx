@@ -1,4 +1,3 @@
-import { set } from "astro:schema";
 import { useState, useCallback } from "react";
 
 interface buttonProps {

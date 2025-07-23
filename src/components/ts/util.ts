@@ -1,4 +1,4 @@
- function aaa (aaa?: number): number {
+function aaa (aaa?: number): number {
   return aaa || 0;
 }
 
